@@ -1,52 +1,35 @@
-import legal from "../utils/legal";
+import { information, languages, company } from "../utils";
 import Separator from "./Separator";
-import lightning from "../assets/images/lightning.png";
+import LinkSection from "./LinkSection";
+import LegalSection from "./LegalSection";
+import CompanySection from "./CompanySection";
 
 const Footer = () => {
   return (
-    <footer className="bottom-[12px] left-0 h-[25rem] w-full bg-[var(--bg-color)] pt-[60px]">
-      <section className="grid grid-cols-2">
-        <div className="flex items-center">
-          <img src={lightning} alt="lightning" />
-          <h2 className="electrolize-regular text-xl uppercase">spark</h2>
-        </div>
-        <div className="flex">
-          <div className="flex flex-col">
-            <h2>Portfolio</h2>
-            <a href="">About</a>
-            <a href="">Skills</a>
-            <a href="">Attributes</a>
-            <a href="">Projects</a>
-            <a href="">Testimonials</a>
+    <footer className="bottom-[12px] left-0 h-full w-full bg-[var(--bg-color)] px-12 pt-12">
+      <section className="grid md:grid-cols-1 lg:grid-cols-2">
+        <CompanySection />
+        <div className="mt-12 grid md:mt-8 md:grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
+          <div className="flex justify-center gap-12 md:items-start md:justify-evenly lg:gap-12">
+            <LinkSection sectionTitle="company" items={company} />
+            <LinkSection sectionTitle="languages" items={languages} />
           </div>
-          <div className="flex flex-col">
-            <h2>Resources</h2>
-            <a href="">Github</a>
-            <a href="">NPM</a>
-            <a href="">JavaScript</a>
-            <a href="">Dribbble</a>
-            <a href="">Testimonials</a>
+
+          <div className="mx-auto mt-12 flex flex-col gap-3 lg:ml-4 lg:mr-0 lg:mt-8">
+            {information.map((info) => (
+              <a
+                key={info.text}
+                href=""
+                className="flex items-center gap-4 text-sm"
+              >
+                {info.icon} {info.text}
+              </a>
+            ))}
           </div>
         </div>
       </section>
       <Separator />
-      <section className="flex flex-col-reverse items-center justify-between gap-[0.8rem] py-[2rem] text-center md:flex-row md:justify-center md:gap-[2rem] md:text-left">
-        <p className="text-[1.2rem]">© 2024 Lucky Luke Codes</p>
-        <div className="text-[1.2rem]">
-          {legal.map((item) => (
-            <a
-              key={item.text}
-              href=""
-              onClick={(e) => {
-                e.preventDefault();
-              }}
-              className="ml-[0.4rem]"
-            >
-              {item.text}
-            </a>
-          ))}
-        </div>
-      </section>
+      <LegalSection />
     </footer>
   );
 };
