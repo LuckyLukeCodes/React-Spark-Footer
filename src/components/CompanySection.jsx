@@ -3,7 +3,7 @@ import lightning from "../assets/images/lightning.png";
 
 const CompanySection = () => {
   return (
-    <div className="flex flex-col items-center gap-4 lg:w-2/3 lg:items-start lg:justify-center">
+    <div className="mb-4 flex flex-col items-center gap-4 lg:w-2/3 lg:items-start lg:justify-center">
       <div className="flex items-center">
         <img src={lightning} alt="lightning" />
         <h2 className="electrolize-regular pl-2 text-3xl font-bold uppercase">
