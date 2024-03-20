@@ -1,6 +1,3 @@
-import React from "react";
-import Separator from "./Separator";
-
 const LinkSection = ({ sectionTitle, items }) => {
   return (
     <div className="mt-8 flex flex-col items-center justify-center gap-3 md:mt-0 lg:items-start">
