@@ -11,7 +11,7 @@ const CompanySection = () => {
         </h2>
       </div>
       <p className="flex w-2/3 text-center lg:ml-2 lg:w-full lg:justify-start lg:text-left">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
+        Lorem ipsum dolor sit, ameta consectetur adipisicing elit. Voluptas
         harum, consequatur quia minima ipsum eum modi molestias cum eligendi
         iste iure sed nemo vel explicabo excepturi soluta alias animi ipsa.
       </p>
